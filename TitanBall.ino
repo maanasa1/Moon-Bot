@@ -1,9 +1,4 @@
 /*
-   List of Terms
-   ss = Sonic Sensor
-   ms = micro seconds
-   cm = centimeters
-
    Robot Motor Setup
           Front
   Left  A        B    Right
@@ -102,39 +97,30 @@ void loop() {
   Forward = A+ B+
   Backward = A- B-
   Left = B+ A-
-  Right = A+ B-
+  Right = A+ B- */
 
-  forward
   //Turn on A+
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   analogWrite(enA, speedA);
-
   //Turn on B+
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
   analogWrite(enB, speedB);
 
-
-  backward
   //Turn on A-
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
-
   //Turn on B-
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
 
-
-  motorsStop
   //Turn Stop Motors
   digitalWrite(in1, LOW);
   digitalWrite(in2, LOW);
   digitalWrite(in3, LOW);
   digitalWrite(in4, LOW);
 
-
-  turnLeft
   //Turn on B+
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
@@ -142,12 +128,9 @@ void loop() {
   digitalWrite(in1, LOW);
   digitalWrite(in2, HIGH);
 
-
-  turnRight
   //Turn on A+
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
   //Turn on B-
   digitalWrite(in3, LOW);
   digitalWrite(in4, HIGH);
-*/
